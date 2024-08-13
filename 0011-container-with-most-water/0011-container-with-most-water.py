@@ -5,9 +5,8 @@ class Solution:
         while left < right:
             output = (right - left) * min(height[left],height[right])
             area = max(area,output)
-            if height[left] > height[right]:
-                right -= 1
-            elif height[left] < height[right]:
+         
+            if height[left] < height[right]:
                 left += 1
             else:
                 right -= 1
