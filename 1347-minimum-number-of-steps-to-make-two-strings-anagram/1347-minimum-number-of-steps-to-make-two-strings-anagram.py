@@ -1,9 +1,7 @@
 class Solution:
     def minSteps(self, s: str, t: str) -> int:
         count = 0
-        char_count = [0] * 26
-     
-       
+        char_count = [0] * 26  
         for i in range(len( s)): 
             char_count[ord(s[i]) - ord('a')] += 1
  
