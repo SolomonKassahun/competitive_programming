@@ -3,11 +3,11 @@ class Solution:
         n = len(s)
         ans = ''
         for i in range(n):
-            ss = set()
+            lst = set()
             for j in range(i, n):
-                ss.add(s[j])
+                lst.add(s[j])
                 if (
-                    all(c.lower() in ss and c.upper() in ss for c in ss)
+                    all(c.lower() in lst and c.upper() in lst for c in lst)
                     and len(ans) < j - i + 1
                 ):
                     ans = s[i : j + 1]
